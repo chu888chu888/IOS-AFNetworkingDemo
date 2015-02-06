@@ -10,6 +10,8 @@
 	<string>AFDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>4B51F4029D254B2D0C35B1454AF05B140CDF1883</key>
+		<string>http://192.168.1.37:8081/gitbucket/git/weAgentGroup/noodleBule.git</string>
 		<key>4F655E53FBFD3252BF82AA20AF5B2267FFA4F0F5</key>
 		<string>https://github.com/chu888chu888/IOS-AFNetworkingDemo.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>AFDemo/AFDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4B51F4029D254B2D0C35B1454AF05B140CDF1883</key>
+		<string>../../../../noodleBule</string>
 		<key>4F655E53FBFD3252BF82AA20AF5B2267FFA4F0F5</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>4F655E53FBFD3252BF82AA20AF5B2267FFA4F0F5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AFNetworkingDemo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4B51F4029D254B2D0C35B1454AF05B140CDF1883</string>
+			<key>IDESourceControlWCCName</key>
+			<string>noodleBule</string>
 		</dict>
 	</array>
 </dict>
