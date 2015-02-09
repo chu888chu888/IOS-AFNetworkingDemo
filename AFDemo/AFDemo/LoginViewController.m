@@ -53,6 +53,16 @@
 }
 
 -(void)registerHandle{
+    AccountOperations *accountOperations=[AccountOperations new];
+    User *ModelStudent=[User new];
+    ModelStudent.userName=@"测试测试";
+    ModelStudent.password=@"445561155645";
+    ModelStudent.collegeId=153;
+    ModelStudent.phone=@"15895487348";
+    ModelStudent.gender=@"男";
+    ModelStudent.email=@"4555@qq.com";
+    ModelStudent.major=@"软件工程";
+    [accountOperations registerStudent:ModelStudent];
 
 }
 
