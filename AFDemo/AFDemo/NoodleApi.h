@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NoodleApi : NSObject
-- (instancetype)initWithAccessToken:(NSString *)theAccessToken;
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "LoginViewController.h"
-
+#import "AccountOperations.h"
+#import "User.h"
 @interface LoginViewController ()
 
 @end
@@ -44,7 +45,11 @@
 
 #pragma mark 点击跳转操作
 -(void)loginHandle {
-
+    AccountOperations *accountOperations=[AccountOperations new];
+    User *ModelStudent=[User new];
+    ModelStudent.userName=[self.view.nameText text];
+    ModelStudent.password=[self.view.passwordText text];
+    [accountOperations loginStudent:ModelStudent];
 }
 
 -(void)registerHandle{

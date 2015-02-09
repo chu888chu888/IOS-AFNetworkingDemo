@@ -194,12 +194,22 @@
     
     //[self APIDemo_Recruitment];
 
-    
+    [self getAccessToken2:@"s666" :^(NSString *strAccess_Token) {
+        NSLog(@"%@",strAccess_Token);
+    }];
     
     
     
     
 }
+- (void)getAccessToken2:(NSString*)strUser:(void (^)(NSString *strAccess_Token))completion {
+    NSLog(@"%@",strUser);
+    if(completion) {
+        NSString *str=@"sssss";
+        completion(str);
+    }
+}
+
 - (void)getAccessToken:(void (^)(NSString *strAccess_Token))completion {
 
      AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];

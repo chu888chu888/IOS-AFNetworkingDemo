@@ -33,6 +33,7 @@
 		B94613E11A8353F100882EF0 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B94613D71A8353F100882EF0 /* JSONValueTransformer.m */; };
 		B94613E31A83545000882EF0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94613E21A83545000882EF0 /* SystemConfiguration.framework */; };
 		B94613E61A83552B00882EF0 /* HttpReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B94613E51A83552B00882EF0 /* HttpReturnModel.m */; };
+		B9515B441A889BA000CD32C6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515B431A889BA000CD32C6 /* User.m */; };
 		B96CA43B1A820BB2001DB947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43A1A820BB2001DB947 /* main.m */; };
 		B96CA43E1A820BB2001DB947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43D1A820BB2001DB947 /* AppDelegate.m */; };
 		B96CA4411A820BB2001DB947 /* AFDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43F1A820BB2001DB947 /* AFDemo.xcdatamodeld */; };
@@ -120,6 +121,8 @@
 		B94613E21A83545000882EF0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B94613E41A83552B00882EF0 /* HttpReturnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpReturnModel.h; sourceTree = "<group>"; };
 		B94613E51A83552B00882EF0 /* HttpReturnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpReturnModel.m; sourceTree = "<group>"; };
+		B9515B421A889BA000CD32C6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B9515B431A889BA000CD32C6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B96CA4351A820BB2001DB947 /* AFDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96CA4391A820BB2001DB947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96CA43A1A820BB2001DB947 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 		B92E56401A84B19500111D8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9515B421A889BA000CD32C6 /* User.h */,
+				B9515B431A889BA000CD32C6 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -591,6 +596,7 @@
 				B94613DC1A8353F100882EF0 /* NSArray+JSONModel.m in Sources */,
 				B96CA4701A820BC8001DB947 /* UIButton+AFNetworking.m in Sources */,
 				B96CA4911A820BD7001DB947 /* AFURLSessionManager.m in Sources */,
+				B9515B441A889BA000CD32C6 /* User.m in Sources */,
 				B94613D81A8353F100882EF0 /* JSONModel.m in Sources */,
 				B92E565F1A84B4CF00111D8E /* UIFont+Base.m in Sources */,
 				B96CA48B1A820BD7001DB947 /* AFHTTPSessionManager.m in Sources */,

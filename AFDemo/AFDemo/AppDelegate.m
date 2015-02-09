@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "AFViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    //AFViewController *LoginVC=[[AFViewController alloc]init];
     LoginViewController *LoginVC=[[LoginViewController alloc]init];
     self.window.rootViewController=LoginVC;
     
