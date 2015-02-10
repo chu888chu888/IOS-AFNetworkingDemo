@@ -10,6 +10,7 @@
 
 #import "AFNetworking.h"
 #import "GlobalOperations.h"
+#import "ResumeOperations.h"
 @interface AFViewController ()
 @property(strong,nonatomic)NSString *returnJsonStr;
 @property(strong,nonatomic)NSString *returnAccessToken;
@@ -199,13 +200,14 @@
         NSLog(@"%@",strAccess_Token);
     }];
      */
-    GlobalOperations *globalOP=[[GlobalOperations alloc] initWithUserName:@"13145877854" PassWord:@"888888"];
+    //GlobalOperations *globalOP=[[GlobalOperations alloc] initWithUserName:@"13145877854" PassWord:@"888888"];
     //[globalOP getAccessToken];
     //globalOP.strUserName=@"13145877854";
     //globalOP.strPassWord=@"888888";
     //NSLog(@"%@",globalOP.strUserName);
     //NSLog(@"%@",globalOP.strAccessToken);
-    
+    ResumeOperations *resumeOP=[ResumeOperations new];
+    [resumeOP get_recruitment_info];
     
     
 }

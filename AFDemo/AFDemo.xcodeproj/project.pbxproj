@@ -57,6 +57,7 @@
 		B96CA4901A820BD7001DB947 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA4861A820BD7001DB947 /* AFURLResponseSerialization.m */; };
 		B96CA4911A820BD7001DB947 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA4881A820BD7001DB947 /* AFURLSessionManager.m */; };
 		B96CA4941A820C05001DB947 /* AFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA4931A820C05001DB947 /* AFViewController.m */; };
+		B9B5C3F01A89FA2500A19170 /* ResumeOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B5C3EF1A89FA2500A19170 /* ResumeOperations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,8 @@
 		B96CA4881A820BD7001DB947 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		B96CA4921A820C05001DB947 /* AFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFViewController.h; sourceTree = "<group>"; };
 		B96CA4931A820C05001DB947 /* AFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFViewController.m; sourceTree = "<group>"; };
+		B9B5C3EE1A89FA2500A19170 /* ResumeOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeOperations.h; sourceTree = "<group>"; };
+		B9B5C3EF1A89FA2500A19170 /* ResumeOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeOperations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,8 @@
 				B92E56711A84BC4A00111D8E /* GlobalOperations.m */,
 				B92E56731A84BC5A00111D8E /* AccountOperations.h */,
 				B92E56741A84BC5A00111D8E /* AccountOperations.m */,
+				B9B5C3EE1A89FA2500A19170 /* ResumeOperations.h */,
+				B9B5C3EF1A89FA2500A19170 /* ResumeOperations.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				B96CA4901A820BD7001DB947 /* AFURLResponseSerialization.m in Sources */,
 				B96CA48F1A820BD7001DB947 /* AFURLRequestSerialization.m in Sources */,
 				B96CA48E1A820BD7001DB947 /* AFURLConnectionOperation.m in Sources */,
+				B9B5C3F01A89FA2500A19170 /* ResumeOperations.m in Sources */,
 				B92E56681A84B59700111D8E /* CSLinearLayoutView.m in Sources */,
 				B92E56441A84B2D100111D8E /* LoginViewController.m in Sources */,
 				B92E565D1A84B4CF00111D8E /* UIButton+Base.m in Sources */,
