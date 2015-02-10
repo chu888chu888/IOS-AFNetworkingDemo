@@ -55,19 +55,22 @@
 -(void)registerHandle{
     AccountOperations *accountOperations=[AccountOperations new];
     User *ModelStudent=[User new];
-    ModelStudent.userName=@"测试测试";
+    ModelStudent.userName=@"测11测试";
     ModelStudent.password=@"445561155645";
     ModelStudent.collegeId=153;
-    ModelStudent.phone=@"15895487348";
+    ModelStudent.phone=@"15195487648";
     ModelStudent.gender=@"男";
-    ModelStudent.email=@"4555@qq.com";
+    ModelStudent.email=@"45515@qq.com";
     ModelStudent.major=@"软件工程";
     [accountOperations registerStudent:ModelStudent];
 
 }
 
 -(void)findHandle{
-
+    //发送验证码
+    AccountOperations *accountOperations=[AccountOperations new];
+    //[accountOperations getRegisterCodeWithPhone:@"15895461348"];
+    [accountOperations checkRegisterCodeWithPhone:@"15895461348" andCode:@"1234"];
 }
 
 

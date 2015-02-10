@@ -49,16 +49,45 @@
 }
 
 //获取注册短信验证码
-- (void)getRegisterCodeWithPhone:(NSString*) phone {}
+- (void)getRegisterCodeWithPhone:(NSString*) phone {
+    //需要传递的数据
+    NSDictionary *parameters = @{
+                                 @"phone" :phone,
+                                 @"behavior" : @"1"
+                                 };
+    [self getRegisterCodeWithPhoneMethod:parameters :^(id returnDic, BOOL returnVal) {
+        NSLog(@"%@ %d",returnDic,returnVal);
+    }];
+}
 
 //验证注册输入的短信
-- (void)checkRegisterCodeWithPhone:(NSString*) phone andCode:(NSString *)code {}
+- (void)checkRegisterCodeWithPhone:(NSString*) phone andCode:(NSString *)code {
+    //需要传递的数据
+    NSDictionary *parameters = @{
+                                 @"phone" :phone,
+                                 @"code":code,
+                                 @"behavior" : @"1"
+                                 };
+    [self checkRegisterCodeWithPhoneMethod:parameters :^(id returnDic, BOOL returnVal) {
+        if (returnVal) {
+            NSLog(@"%@ %d",returnDic,returnVal);
+        }
+        else
+        {
+            NSLog(@"请求失败");
+        }
+    }];
+}
 
 //修改密码
-- (void)changeCurrentPassword:(NSString *)currentPassword withNewPassword:(NSString *)newPassword andConfirmPassword:(NSString *)confirmPassword {}
+- (void)changeCurrentPassword:(NSString *)currentPassword withNewPassword:(NSString *)newPassword andConfirmPassword:(NSString *)confirmPassword {
+
+}
 
 //找回密码
-- (void)findPasswordWithPhone:(NSString*) phone andPassword:(NSString *)newPassword {}
+- (void)findPasswordWithPhone:(NSString*) phone andPassword:(NSString *)newPassword {
+
+}
 
 //获取找回密码短信验证码
 - (void)getFindCodeWithPhone:(NSString*) phone {}
@@ -112,6 +141,63 @@
     
     
     [operationManager POST:@"http://121.42.51.177/user"
+                parameters:params
+                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                       if(completion) {
+                           completion(responseObject,TRUE);
+                       }
+                   }
+                   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                       if(completion) {
+                           completion(nil,FALSE);
+                           NSLog(@"Error: %@", [error description]);
+                       }
+                       
+                   }
+     ];
+}
+//注册方法
+- (void)getRegisterCodeWithPhoneMethod:(NSDictionary*)params:(void (^)(id returnDic,BOOL returnVal))completion {
+    
+    AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
+    
+    operationManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [operationManager.requestSerializer setValue:@"application/vnd.591m.v1+json" forHTTPHeaderField:@"Accept"];
+    [operationManager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    operationManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    operationManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    
+    
+    [operationManager POST:@"http://121.42.51.177/user/access_code"
+                parameters:params
+                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                       if(completion) {
+                           completion(responseObject,TRUE);
+                       }
+                   }
+                   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                       if(completion) {
+                           completion(nil,FALSE);
+                           NSLog(@"Error: %@", [error description]);
+                       }
+                       
+                   }
+     ];
+}
+- (void)checkRegisterCodeWithPhoneMethod:(NSDictionary*)params:(void (^)(id returnDic,BOOL returnVal))completion {
+    
+    AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
+    
+    operationManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    [operationManager.requestSerializer setValue:@"application/vnd.591m.v1+json" forHTTPHeaderField:@"Accept"];
+    [operationManager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    operationManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    operationManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    
+    
+    [operationManager POST:@"http://121.42.51.177/user/check_code"
                 parameters:params
                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
                        if(completion) {

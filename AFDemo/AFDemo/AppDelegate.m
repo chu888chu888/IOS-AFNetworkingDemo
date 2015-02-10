@@ -21,8 +21,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    //AFViewController *LoginVC=[[AFViewController alloc]init];
-    LoginViewController *LoginVC=[[LoginViewController alloc]init];
+    AFViewController *LoginVC=[[AFViewController alloc]init];
+    //LoginViewController *LoginVC=[[LoginViewController alloc]init];
     self.window.rootViewController=LoginVC;
     
     return YES;

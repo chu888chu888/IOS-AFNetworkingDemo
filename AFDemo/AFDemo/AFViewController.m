@@ -9,7 +9,7 @@
 #import "AFViewController.h"
 
 #import "AFNetworking.h"
-#import "HttpReturnModel.h"
+#import "GlobalOperations.h"
 @interface AFViewController ()
 @property(strong,nonatomic)NSString *returnJsonStr;
 @property(strong,nonatomic)NSString *returnAccessToken;
@@ -137,9 +137,10 @@
                         HttpReturnModel *returnModel=[[HttpReturnModel alloc]initWithString:returnJsonStr error:nil];
                         NSLog(@"Model:%@",returnModel.access_token);
                         */
+                       /*
                        NSString *returnStr=[self dictionaryOrArrayToJSONString:responseObject];
                        HttpReturnModel *returnModel=[[HttpReturnModel alloc]initWithString:returnStr error:nil];
-                       NSLog(@"access_token:%@",returnModel.access_token);
+                       NSLog(@"access_token:%@",returnModel.access_token);*/
                        
                    }
                    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -193,11 +194,17 @@
      */
     
     //[self APIDemo_Recruitment];
-
+    /*
     [self getAccessToken2:@"s666" :^(NSString *strAccess_Token) {
         NSLog(@"%@",strAccess_Token);
     }];
-    
+     */
+    GlobalOperations *globalOP=[[GlobalOperations alloc] initWithUserName:@"13145877854" PassWord:@"888888"];
+    //[globalOP getAccessToken];
+    //globalOP.strUserName=@"13145877854";
+    //globalOP.strPassWord=@"888888";
+    //NSLog(@"%@",globalOP.strUserName);
+    //NSLog(@"%@",globalOP.strAccessToken);
     
     
     
