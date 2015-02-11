@@ -33,6 +33,8 @@
 		B94613E11A8353F100882EF0 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B94613D71A8353F100882EF0 /* JSONValueTransformer.m */; };
 		B94613E31A83545000882EF0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94613E21A83545000882EF0 /* SystemConfiguration.framework */; };
 		B9515B441A889BA000CD32C6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515B431A889BA000CD32C6 /* User.m */; };
+		B955488C1A8B2C2B00C49F0C /* TestOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = B955488B1A8B2C2B00C49F0C /* TestOperations.m */; };
+		B955488F1A8B31D500C49F0C /* ITunesClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B955488E1A8B31D500C49F0C /* ITunesClient.m */; };
 		B96CA43B1A820BB2001DB947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43A1A820BB2001DB947 /* main.m */; };
 		B96CA43E1A820BB2001DB947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43D1A820BB2001DB947 /* AppDelegate.m */; };
 		B96CA4411A820BB2001DB947 /* AFDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B96CA43F1A820BB2001DB947 /* AFDemo.xcdatamodeld */; };
@@ -121,6 +123,10 @@
 		B94613E21A83545000882EF0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B9515B421A889BA000CD32C6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B9515B431A889BA000CD32C6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B955488A1A8B2C2B00C49F0C /* TestOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperations.h; sourceTree = "<group>"; };
+		B955488B1A8B2C2B00C49F0C /* TestOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperations.m; sourceTree = "<group>"; };
+		B955488D1A8B31D500C49F0C /* ITunesClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesClient.h; sourceTree = "<group>"; };
+		B955488E1A8B31D500C49F0C /* ITunesClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesClient.m; sourceTree = "<group>"; };
 		B96CA4351A820BB2001DB947 /* AFDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96CA4391A820BB2001DB947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96CA43A1A820BB2001DB947 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 				B92E566F1A84BBF000111D8E /* Operations */,
 				B92E566C1A84BB8E00111D8E /* NoodleApi.h */,
 				B92E566D1A84BB8E00111D8E /* NoodleApi.m */,
+				B955488D1A8B31D500C49F0C /* ITunesClient.h */,
+				B955488E1A8B31D500C49F0C /* ITunesClient.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -307,6 +315,8 @@
 				B92E56741A84BC5A00111D8E /* AccountOperations.m */,
 				B9B5C3EE1A89FA2500A19170 /* ResumeOperations.h */,
 				B9B5C3EF1A89FA2500A19170 /* ResumeOperations.m */,
+				B955488A1A8B2C2B00C49F0C /* TestOperations.h */,
+				B955488B1A8B2C2B00C49F0C /* TestOperations.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -584,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B955488F1A8B31D500C49F0C /* ITunesClient.m in Sources */,
 				B92E564A1A84B45900111D8E /* GlobalUIView.m in Sources */,
 				B94613DE1A8353F100882EF0 /* JSONHTTPClient.m in Sources */,
 				B96CA4891A820BD7001DB947 /* AFHTTPRequestOperation.m in Sources */,
@@ -619,6 +630,7 @@
 				B92E56721A84BC4A00111D8E /* GlobalOperations.m in Sources */,
 				B92E565E1A84B4CF00111D8E /* UIColor+Base.m in Sources */,
 				B94613E11A8353F100882EF0 /* JSONValueTransformer.m in Sources */,
+				B955488C1A8B2C2B00C49F0C /* TestOperations.m in Sources */,
 				B96CA4721A820BC8001DB947 /* UIProgressView+AFNetworking.m in Sources */,
 				B94613E01A8353F100882EF0 /* JSONKeyMapper.m in Sources */,
 				B96CA46E1A820BC8001DB947 /* UIActivityIndicatorView+AFNetworking.m in Sources */,

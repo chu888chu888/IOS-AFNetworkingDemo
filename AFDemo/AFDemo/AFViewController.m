@@ -11,13 +11,16 @@
 #import "AFNetworking.h"
 #import "GlobalOperations.h"
 #import "ResumeOperations.h"
+#import "TestOperations.h"
+#import "ITunesClient.h"
 @interface AFViewController ()
 @property(strong,nonatomic)NSString *returnJsonStr;
 @property(strong,nonatomic)NSString *returnAccessToken;
+@property(nonatomic) NSArray *returnJson;
 @end
 
 @implementation AFViewController
-@synthesize returnJsonStr,returnAccessToken;
+@synthesize returnJsonStr,returnAccessToken,returnJson;
 - (void)AFHTTPRequestOperationManagerDemo {
     //封装与Web应用程序通过HTTP交互，包括请求的创建，响应序列化，
     //网络可达性监控和安全，以及请求操作管理的常见沟通模式。
@@ -206,10 +209,29 @@
     //globalOP.strPassWord=@"888888";
     //NSLog(@"%@",globalOP.strUserName);
     //NSLog(@"%@",globalOP.strAccessToken);
-    ResumeOperations *resumeOP=[ResumeOperations new];
-    [resumeOP get_recruitment_info];
+    //ResumeOperations *resumeOP=[ResumeOperations new];
+    //[resumeOP get_recruitment_info];
     
+    //TestOperations *testOP=[TestOperations new];
+    //[testOP getData];
     
+    NSURLSessionDataTask *task = [[ITunesClient sharedClient] searchForTerm:@"刘德华"
+                                                                 completion:^(NSArray *results, NSError *error) {
+                                                                     if (results) {
+                                                                         //NSLog(@"Result: %@", results);
+                                                                         returnJson=results;
+                                                                         [self printJson];
+
+                                                                     } else {
+                                                                         NSLog(@"ERROR: %@", error);
+                                                                     }
+                                                                 }];
+
+    
+}
+-(void)printJson
+{
+        NSLog(@"returnJson %@",returnJson);
 }
 - (void)getAccessToken2:(NSString*)strUser:(void (^)(NSString *strAccess_Token))completion {
     NSLog(@"%@",strUser);

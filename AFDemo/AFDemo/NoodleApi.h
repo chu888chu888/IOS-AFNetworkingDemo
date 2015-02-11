@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface NoodleApi : NSObject
-
+#import "AFNetworking.h"
+@interface NoodleApi : AFHTTPSessionManager
+/**
+ *  @brief 单例模式
+ *  @param
+ *  @return 返回一个类的实例
+ */
++ (instancetype)sharedClient;
 @end
